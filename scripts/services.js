@@ -26,11 +26,11 @@ export const getConversations = async (idLoggedUser) => {
 };
 
 
-export const sendText = async (idConversation, arrayMessengers) => {
+export const sendText = async (idConversation, arrayMessages) => {
     try {
         const urlConversation = `${URL_API}conversations/${idConversation}`;
         const response = await axios.patch(urlConversation, {
-          menssengers: arrayMessengers
+          messages: arrayMessages
         });
         console.log(response);
         return response

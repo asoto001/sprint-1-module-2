@@ -62,19 +62,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderSmallCards(smallCardsContainer, contacts);
 
 
-    // const users = await getUsers();
-    //renderSmallCards(users)
-    //renderProfileCard(users)
+    
 });
 
-// document.addEventListener('click', ({target}) => {
-//     if(target.classList.contains('aside-container__chats-card')) {
-//         const index = parseInt(target.getAttribute("data-index"));
-//         const conversation = conversations[index];
-//         renderConversations(conversation, conversationsContainer, loggedUser);
-//         sessionStorage.setItem('indexConversation', JSON.stringify(index));
-//     }
-// })
+
 
 smallCardsContainer.addEventListener('click', ({target}) => {
     //console.log(e)
@@ -129,21 +120,23 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const textBox = document.querySelector('.main-container__new-mensage-imput');
     const indexConversation = JSON.parse(sessionStorage.getItem("indexConversation"));
-    const { id, menssengers } = conversations[indexConversation];
+    const { id, messages } = conversations[indexConversation];
     console.log(textBox.value);
     if (textBox.value) {
         const msg = {
-            id: menssengers.length + 1,
+            id: messages.length + 1,
             sendBy: loggedUser,
-            mensserger: textBox.value,
+            message: textBox.value,
             isSeem:false
         };
-        menssergers.push(msg);
-        await sendText(id, menssergers);
+        messages.push(msg);
+        await sendText(id, messages);
         renderConversations(conversations[indexConversation], conversationsContainer, loggedUser);
         textBox.value = "";
+        console.log(messages)
+        //e.preventDefault();
     }
-
+    
 })
 
 // funciones 
