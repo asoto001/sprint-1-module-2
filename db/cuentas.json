@@ -1,0 +1,202 @@
+{
+   "cuentas" :[
+        {
+            "id": 1,
+            "nombre": "Robin Scherbatstky",
+            "foto" : "./01 ICONS/robin.jpeg",
+            "celular": 3237771766,
+            "contraseña":"robin10" ,
+            "info": "locutora de metro news 1",
+            "conectado": false
+
+
+        },
+        {
+            "id": 2,
+            "nombre": "Barney Stinson",
+            "foto" : "./01 ICONS/barney.jpeg",
+            "celular": 3145256867,
+            "contraseña":"legendario" ,
+            "info": "Esto va a ser ¡LEGENDARIO!",
+            "conectado": false
+
+        },
+        {
+            "id": 3,
+            "nombre": "Ted Mosby",
+            "foto" : "./01 ICONS/ted.jpg",
+            "celular": 3001023654,
+            "contraseña":"eciclopaedia" ,
+            "info": "Arquitecto del edificio GNB",
+            "conectado": false
+
+        },
+        {
+            "id": 4,
+            "nombre": "Lily Aldrin",
+            "foto" : "./01 ICONS/lily.webp",
+            "celular": 3152036569,
+            "contraseña":"humectacion22" ,
+            "info": "Artista 24/7",
+            "conectado": false
+
+        }, 
+        {
+            "id": 5,
+            "nombre": "Marshall Eriksen",
+            "foto" : "./01 ICONS/marshall.jpeg",
+            "celular": 3224444176,
+            "contraseña":"arrivederchi-fiero" ,
+            "info": "🔥🔥🔥🔥🔥🔥🔥🔥",
+            "conectado": false
+
+        },
+        {
+            "id": 6,
+            "nombre": "Lorenzo von Matternhorn",
+            "foto" : "./01 ICONS/lorenzo.jpg",
+            "celular": 3056664152,
+            "contraseña":"la-traje-de-buzo" ,
+            "info": "Multimillonario que viaja por el mundo",
+            "conectado": false
+
+        }
+   ],
+   "conversations": [
+        {
+            "id" :1,
+            "userSender": 3,
+            "userReceptor": 2,
+            "messages": [
+                {
+                    "id": 1,
+                    "sendBy": 3,
+                    "message": "Hola, como estas?",
+                    "isSeem": true
+                },
+                {
+                    "id": 2,
+                    "sendBy": 2,
+                    "message": "Desepcionado!",
+                    "isSeem": true
+                },
+                {
+                    "id": 3,
+                    "sendBy": 2,
+                    "message": "Como es que nunca llevas traje?!",
+                    "isSeem": true
+                },
+                {
+                    "id": 4,
+                    "sendBy": 2,
+                    "message": "Si lo hicieras, tus resultados serian mejores 😎",
+                    "isSeem": true
+                },
+                {
+                    "id": 5,
+                    "sendBy": 3,
+                    "message": "Barney, telo he dicho muchas veses",
+                    "isSeem": true
+                },
+                {
+                    "id": 6,
+                    "sendBy": 3,
+                    "message": "No lo nesecito, yo poseo carisma natural, si lo usara quedaria tipo 🤡 ",
+                    "isSeem": true
+                }
+            ]
+        },
+        {
+            "id" :2,
+            "userSender": 3,
+            "userReceptor": 1,
+            "messages": [
+                {
+                    "id": 1,
+                    "sendBy": 3,
+                    "message": "Hola, como estas?",
+                    "isSeem": true
+                },
+                {
+                    "id": 2,
+                    "sendBy": 1,
+                    "message": "A que no te imaginas lo que me encontre",
+                    "isSeem": true
+                },
+                {
+                    "id": 3,
+                    "sendBy": 1,
+                    "message": "Una moneda antigua!",
+                    "isSeem": true
+                },
+                {
+                    "id": 4,
+                    "sendBy": 1,
+                    "message": "Te imaginas por todo lo que a pasado esta moneda de mas de 80 años?",
+                    "isSeem": true
+                },
+                {
+                    "id": 5,
+                    "sendBy": 3,
+                    "message": "Robin la verdad es que no",
+                    "isSeem": true
+                },
+                {
+                    "id": 6,
+                    "sendBy": 3,
+                    "message": "Pero donde encontraste esa moneda?",
+                    "isSeem": true
+                }
+            ]
+        },
+        {
+            "id" :3,
+            "userSender": 3,
+            "userReceptor": 5,
+            "messages": [
+                {
+                    "id": 1,
+                    "sendBy": 3,
+                    "message": "Hola Marshall, alfin en donde sera la cena de accion de grgacias?",
+                    "isSeem": true
+                },
+                {
+                    "id": 2,
+                    "sendBy": 5,
+                    "message": "Hola Ted",
+                    "isSeem": true
+                },
+                {
+                    "id": 3,
+                    "sendBy": 5,
+                    "message": "Dia de golpes sera en mi casa",
+                    "isSeem": true
+                },
+                {
+                    "id": 4,
+                    "sendBy": 5,
+                    "message": "no olvides traer las tartas",
+                    "isSeem": true
+                },
+                {
+                    "id": 5,
+                    "sendBy": 3,
+                    "message": "Espera un minuto, dia de golpes?",
+                    "isSeem": true
+                },
+                {
+                    "id": 6,
+                    "sendBy": 3,
+                    "message": "No me digas que planeas cobrarle a Barney la apuesta",
+                    "isSeem": true
+                },
+                {
+                    "id": 7,
+                    "sendBy": 3,
+                    "message": "Probre Barney, no sabe lo que le espera",
+                    "isSeem": true
+                }
+            ]
+        }
+   ]
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>whatsApp</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <aside class="aside-container">
+        <section class="aside-container__user">
+            <figure><img src="./01 ICONS/lorenzo.jpg" alt=""></figure>
+        </section>
+        <section class="aside-container__search">
+            <div>
+                <figure><img src="./01 ICONS/search.svg" alt=""></figure>
+                <input type="text" placeholder="Buscar o iniciar un nuevo chat">
+            </div>
+        </section>
+        <section class="aside-container__chats-container">
+            
+        </section>
+        <section class="aside-container__user-info-container hidden">
+            <div>
+             <button class="aside-container__btn-back"><img src="./01 ICONS/arrow-left.svg" alt=""></button>
+             <h2>Perfil</h2>
+            </div>
+             <article class="aside-container__info-container">
+                <!-- <figure><img src="./01 ICONS/lorenzo.jpg" alt="img"></figure>
+                <p>Tu nombre</p>
+                <h3>Lorenzo Von Matterhorn</h3>
+                <p>Info.</p>
+                <h3>multimillonario que viaja por el mundo</h3> -->
+             </article>
+         </section>
+    </aside>
+
+    <section class="login-register ">
+        <section class="login-register__btns " >
+            <h2>Iniciar secion / resgistrarse</h2>
+            <div>
+                <button class="login-register__login">Iniciar secion</button>
+                <button class="login-register__register-btn">Registrarse</button>
+            </div>
+        </section>
+        <section class="login-register__register-container hidden ">
+            <h2>Registrate</h2>
+            <form class="form-register">
+                <!-- <p>Nombre</p>
+                <input type="text" class="inputs" placeholder="Ingresa tu nombre" id="inputName">
+                <div class="login-register__register"></div> -->
+
+                <label class="form-register__label inputs" for="registerName">Nombre</label>
+                <input class="form-register__input inputs" type="text" name="registerName" id="registerName" placeholder="Exp. 
+                Michelle Jenkins" >
+                <div class="form-register__name--error error" ></div>    
+
+                <!-- <p>Foto de perfil</p>
+                <input type="text" class="inputs" placeholder="Ingresa el url de la fot de perfil" id="inputPhoto"> -->
+                <label class="form-register__label inputs" for="profilePhoto">Foto de perfil</label>
+                <input class="form-register__input inputs" type="text" name="profilePhoto" id="profilePhoto" placeholder="Exp. 
+                Benito Juarez" >
+                <div class="form-register__profilePhoto--error error" ></div>
+
+                <!-- <p>Celular</p>
+                <input type="text" class="inputs" placeholder="Ingresa tu numero telefonico" id="inputNumber" maxlength="10"> -->
+                <label class="form-register__label inputs " for="registerPhoneNumber">Numero de celular</label>
+                <input class="form-register__input inputs" type="text" name="registerPhoneNumber" id="registerPhoneNumber" maxlength="10" placeholder="Exp. 300 444 485 0" >
+                <div class="form-register__registerPhoneNumber--error error" ></div>
+
+                <!-- <p>Contraseña</p>
+                <input type="password" class="inputs" placeholder="Ingresa tu contraseña" id="inputContarseña"> -->
+                <label class="form-register__label inputs " for="registerPasword">Contraseña</label>
+                <input class="form-register__input inputs" type="text" name="registerPasword" id="registerPasword" placeholder="escribe la contraseña" >
+                <div class="form-register__registerPasword--error error" ></div>
+
+                <!-- <p>Confirmar contraseña</p>
+                <input type="password" class="inputs" placeholder="Confirma la contraseña" id="inputContarseñaConfirm"> -->
+                <label class="form-register__label inputs " for="registerConfirmPasword">Confirmar la contraseña</label>
+                <input class="form-register__input inputs" type="text" name="registerConfirmPasword" id="registerConfirmPasword" placeholder="Confirma la contraseña" >
+                <div class="form-register__registerConfirmPasword--error error" ></div>
+
+                <!-- <p>Escribe tu frase o una descripcion</p>
+                <input type="text" class="inputs" placeholder="Frase o descripocion" id="inputFrase"> -->
+                <label class="form-register__label inputs" for="registerInfoSentence">Escribe info o una frase</label>
+                <input class="form-register__input inputs" type="text" name="registerInfoSentence" id="registerInfoSentence" placeholder="Exp. nothing is true, everithing is permited" >
+                <div class="form-register__registerInfoSentence--error error" ></div>
+
+                <button type="submit" class="form-register__form-btn">Guardar</button>
+            </form>
+        </section>
+        <section class="login-register__login-container hidden">
+            <h2>Iniciar secion</h2>
+            <form class="form-login">
+                <!-- <p>Celular</p>
+                <input type="text" class="inputLoginCell inputs"  maxlength="10" placeholder="Ingresa tu celular"> -->
+                <label class="form-login__label" for="cardNumberLogin">Numero celular</label>
+                <input class="form-login__input inputs" type="text" name="cardNumberLogin" id="cardNumberLogin" maxlength="10" placeholder="Exp. 300 222 223 5" >
+                <div class="form-login__cardnumber--error error" ></div>
+
+                <!-- <p>Contraseña</p>
+                <input type="password" class="inputLoginPasword  inputs" placeholder="Ingresa tu contraseña"> -->
+                <label class="form-register__label inputs " for="loginPasword">Contraseña</label>
+                <input class="form-register__input inputs" type="text" name="loginPasword" id="loginPasword" placeholder="Ingresa tu contraseña" >
+                <div class="form-register__loginPasword--error error" ></div>
+
+                <button class="form-login__login-btn">Ingresar</button>
+            </form>
+        </section>
+        
+    </section>
+
+    <main class="main-container">
+        <section class="main-container__header">
+            <div class="main-container__mns-receiver-info">
+                <figure class="main-container__reciever-photo"><img src="./01 ICONS/robin.jpeg" alt=""></figure>
+                <div>
+                    <h2>Robin Scherbastky</h2>
+                    <p><span>EN LINEA</span></p>
+                </div>
+            </div>
+            <input type="text" class="main-container__search-mensage hidden" placeholder="Buscar un mensaje">
+            <button class="main-container__search-btn"><img src="./01 ICONS/search.svg" alt=""></button>
+        </section>
+        <section class="main-container__mensage-sec">
+           <article class="main-container__mensage-container">
+             
+           </article>
+        </section>
+        <form class="main-container__new-mensage">
+            <button class="main-container__emojis btn-bar"><img src="./01 ICONS/smile.svg" alt=""></button>
+            <button class="main-container__archive btn-bar"><img src="./01 ICONS/paperclip.svg" alt=""></button>
+            <input type="text" class="main-container__new-mensage-imput" placeholder="Escribir un mensaje">
+            <button type="submit" class="main-container__recording btn-bar" ><img src="./01 ICONS/mic.svg" alt=""></button>
+        </form>
+        <section class="main-container__character-container hidden">
+                <div>
+                    <button class="main-container__btn-close"><img src="./01 ICONS/x.svg" alt=""></button>
+                    <h2>Perfil</h2>
+                </div>
+                <article class="main-container__character-info-container">
+                     
+                </article>
+        </section>
+    </main>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
