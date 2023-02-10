@@ -21,31 +21,57 @@ export const renderSmallCards = (container, contactList) => {
     })
 }
 
-export const renderProfileCard = (cuentas) => {
-    profileCard.innerHTML = ''
-    profileCard.innerHTML = `
-    <figure><img src="${cuentas.foto}" alt="img"></figure>
-    <p>Tu nombre</p>
-    <h3>${cuentas.nombre}</h3>
-    <p>Info.</p>
-    <h3>${cuentas.info}</h3>
-    `
+export const renderProfileBtn = (users, loggedUser, container) => {
+    if (users.id === loggedUser) {
+        console.log(users)
+        container.innerHTML = '';
+        container.innerHTML = `
+            <figure><img src="${users.foto}" alt=""></figure>
+        `
+    }        
+  
+} 
+export const renderProfileCard = (users, loggedUser, container) => {
+    if (users.id === loggedUser) {
+        container.innerHTML = ''
+        container.innerHTML = `
+            <figure><img src="${users.foto}" alt="img"></figure>
+            <p>Tu nombre</p>
+            <h3>${users.nombre}</h3>
+            <p>Info.</p>
+            <h3>${users.info}</h3>
+        `
+    }
 }
 
-export const rendercharacterProfileCard = (cuentas) => {
-    characterProfileCard.innerHTML = ''
-    characterProfileCard.innerHTML = `
-        <figure><img src="${cuentas.foto}" alt="img"></figure>
-        <h2>${cuentas.nombre}</h2>
-        <p>Info.</p>
-        <h3>${cuentas.info}</h3>
+export const renderCharacterBtn = (character, idReceptor, container) => {
+    if (character.id === idReceptor) {
+        container.innerHTML = ''
+        container.innerHTML = `
+        <figure class="main-container__reciever-photo"><img src="${character.foto}" alt=""></figure>
+        <div>
+            <h2>${character.nombre}</h2>
+            <p>${character.conectado}</p>
+        </div>
     `
+    }
+}
+
+export const rendercharacterProfileCard = (character, idReceptor, container) => {
+    if (character.id === idReceptor) {
+        container.innerHTML = ''
+        container.innerHTML = `
+            <figure><img src="${character.foto}" alt="img"></figure>
+            <h2>${character.nombre}</h2>
+            <p>Info.</p>
+            <h3>${character.info}</h3>
+    `
+    }
 }
 
 export const renderConversations = ( messages, container, idUserLogged) => {
     container.innerHTML = '';
     const arr = Array.from(messages.messages);
-    //arr.forEach(element => console.log(element))
     arr.forEach(element => {
         container.innerHTML += `
             <section class=${element.sendBy === idUserLogged? 'main-container__mns-user': 'main-container__mns-receiver'}>${

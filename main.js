@@ -1,6 +1,6 @@
-import { getConversations, sendText, getContacts } from "./scripts/services.js"
+import {getUsers, getConversations, sendText, getContacts } from "./scripts/services.js"
 
-import { renderSmallCards, renderProfileCard, rendercharacterProfileCard, renderConversations} from "./scripts/ui.js"
+import { renderSmallCards, renderProfileBtn, renderCharacterBtn, renderProfileCard, rendercharacterProfileCard, renderConversations} from "./scripts/ui.js"
 
 const modalSignIn = document.querySelector('.login-register')
 const loginRegisBtnsSection = document.querySelector('.login-register__btns');
@@ -48,33 +48,41 @@ const  charaterInfoContiner = document.querySelector('.main-container__character
 const btnBackCharater = document.querySelector('.main-container__btn-close');
 
 const profileCard = document.querySelector('.aside-container__info-container');
-const characterProfileCard = document.querySelector('.main-container__character-info-container');
+const characterCharacterCard = document.querySelector('.main-container__character-info-container');
 const form = document.querySelector('.main-container__new-mensage')
 
 const loggedUser = 3;
 let conversations = [];
+let users = []
+let character = []
  
 
 document.addEventListener('DOMContentLoaded', async () => {
+    users = await getUsers(loggedUser);
+    console.log(users)
     conversations = await getConversations(loggedUser);
     console.log(conversations);
     const contacts = await getContacts(loggedUser, conversations);
     renderSmallCards(smallCardsContainer, contacts);
-
-
-    
+    renderProfileBtn(users, loggedUser, showProfile);
+    renderProfileCard(users, loggedUser, profileCard);
 });
 
 
 
-smallCardsContainer.addEventListener('click', ({target}) => {
+smallCardsContainer.addEventListener('click', async ({target}) => {
     //console.log(e)
     if(target.id){
         const index = parseInt(target.dataset.index)
         const conversation = conversations[index];
         renderConversations(conversation, conversationsContainer, loggedUser);
         sessionStorage.setItem('indexConversation', JSON.stringify(index));
-        console.log(conversation)
+        console.log(conversation);
+        const idReceptor = target.id;
+        character = await getUsers(idReceptor);
+        console.log(character);
+        rendercharacterProfileCard(character, idReceptor, characterCharacterCard);
+        renderCharacterBtn(character, idReceptor, showCharacter)
     }
 })
 
